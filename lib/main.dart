@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'presentation/pages/login_page.dart';
 import 'presentation/providers/auth_provider.dart';
 import 'sl.dart' as di;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await di.init(); 
+  await di.init();
 
   runApp(
     MultiProvider(
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      home: const LoginPage(),
     );
   }
 }
